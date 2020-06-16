@@ -1,0 +1,12 @@
+@article {Sun2020.05.05.078774,
+	author = {Sun, Lei and Xu, Kui and Huang, Wenze and Yang, Yucheng T. and Tang, Lei and Xiong, Tuanlin and Zhang, Qiangfeng Cliff},
+	title = {Predicting dynamic cellular protein-RNA interactions using deep learning and in vivo RNA structure},
+	elocation-id = {2020.05.05.078774},
+	year = {2020},
+	doi = {10.1101/2020.05.05.078774},
+	publisher = {Cold Spring Harbor Laboratory},
+	abstract = {Interactions with RNA-binding proteins (RBPs) are crucial for RNA regulation and function. While both RNA sequence and structure are critical determinants, RNA structure is dependent on cellular environment and especially important in regulating dynamic RBP bindings across various conditions. However, how distinct it contributes to RBP binding in vivo remains poorly understood. To address this issue, we obtained transcriptome-wide RNA secondary structure profiles in multiple cell-types, and established a deep neural network, PrismNet, that uses in vivo RNA structures to accurately predict cellular protein-RNA interactions. With a deep learning {\textquotedblleft}attention{\textquotedblright} strategy, PrismNet discovers the exact binding nucleotides and their mutational effect. The predicted binding sites are highly conserved and enriched for rare, deleterious genetic variants. Remarkably, dynamic RBP binding sites are enriched for structure-changing variants (riboSNitches), which are often associated with disease, reflecting dysregulated RBP bindings. Our resource enables the analysis of cell-type-specific RNA regulation, with applications in human disease.Highlights 1, A big data resource of transcriptome-wide RNA secondary structure profiles in multiple cell types2, PrismNet, a deep neural network, accurately models the sequence and structural combined patterns of protein-RNA interactions in vivo3, RNA structural information in vivo is critical for the accurate prediction of dynamic RBP binding in various cellular conditions4, PrismNet can dissect and predict how mutations affect RBP binding via RNA sequence or structure changes5, RNA structure-changing RiboSNitches are enriched in dynamic RBP binding sites and often associated with disease, likely disrupting RBP-based regulationCompeting Interest StatementThe authors have declared no competing interest.},
+	URL = {https://www.biorxiv.org/content/early/2020/05/07/2020.05.05.078774},
+	eprint = {https://www.biorxiv.org/content/early/2020/05/07/2020.05.05.078774.full.pdf},
+	journal = {bioRxiv}
+}

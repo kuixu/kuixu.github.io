@@ -1,0 +1,24 @@
+@Article{Xiong2019,
+author={Xiong, Lei
+and Xu, Kui
+and Tian, Kang
+and Shao, Yanqiu
+and Tang, Lei
+and Gao, Ge
+and Zhang, Michael
+and Jiang, Tao
+and Zhang, Qiangfeng Cliff},
+title={SCALE method for single-cell ATAC-seq analysis via latent feature extraction},
+journal={Nature Communications},
+year={2019},
+month={Oct},
+day={08},
+volume={10},
+number={1},
+pages={4576},
+abstract={Single-cell ATAC-seq (scATAC-seq) profiles the chromatin accessibility landscape at single cell level, thus revealing cell-to-cell variability in gene regulation. However, the high dimensionality and sparsity of scATAC-seq data often complicate the analysis. Here, we introduce a method for analyzing scATAC-seq data, called Single-Cell ATAC-seq analysis via Latent feature Extraction (SCALE). SCALE combines a deep generative framework and a probabilistic Gaussian Mixture Model to learn latent features that accurately characterize scATAC-seq data. We validate SCALE on datasets generated on different platforms with different protocols, and having different overall data qualities. SCALE substantially outperforms the other tools in all aspects of scATAC-seq data analysis, including visualization, clustering, and denoising and imputation. Importantly, SCALE also generates interpretable features that directly link to cell populations, and can potentially reveal batch effects in scATAC-seq experiments.},
+issn={2041-1723},
+doi={10.1038/s41467-019-12630-7},
+url={https://doi.org/10.1038/s41467-019-12630-7}
+}
+

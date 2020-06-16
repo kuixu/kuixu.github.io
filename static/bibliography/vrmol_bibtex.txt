@@ -1,0 +1,12 @@
+@article {Xu589366,
+	author = {Xu, Kui and Liu, Nan and Xu, Jingle and Guo, Chunlong and Zhao, Lingyun and Wang, Hong-Wei and Zhang, Qiangfeng Cliff},
+	title = {VRmol: an Integrative Cloud-Based Virtual Reality System to Explore Macromolecular Structure},
+	elocation-id = {589366},
+	year = {2019},
+	doi = {10.1101/589366},
+	publisher = {Cold Spring Harbor Laboratory},
+	abstract = {Past decades have seen much effort devoted to the tool development for biomacromolecule structural visualization and analysis. In recent years, we have witnessed tremendous advancement in computational technologies, especially in graphics and internet. Here we present an integrative cloud-based, virtual reality (VR) system -- VRmol that exploits these technology advances to visualize and study macromolecule structures in various forms. The immersive environment can improve user experiences in visualization, calculation, and editing of complex structures with more intuitive perception. VRmol is also a system with cloud-based capability to directly access disease-related databases, and couples the structure with genomic variation as well corresponding drugs information in a visual interface, thus serving as an integrative platform to aid structure-based translational research and drug design. VRmol is freely available at https://VRmol.net.},
+	URL = {https://www.biorxiv.org/content/early/2019/03/27/589366.1},
+	eprint = {https://www.biorxiv.org/content/early/2019/03/27/589366.1.full.pdf},
+	journal = {bioRxiv}
+}

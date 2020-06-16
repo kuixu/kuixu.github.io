@@ -1,19 +1,480 @@
----
-layout: main
----
-{% for post in paginator.posts %}
-<article class="post">
-  {% if post.img %}
-    <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
-  {% else %}
-  {% endif %}
-  <div class="post-content">
-    <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
-    <p>{{ post.content | strip_html | truncatewords: 15 }}</p>
-    <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
-  </div>
-</article>
-{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% include pagination.html %}
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MKVKMCP');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta name="keywords" content="kui, kui xu, tsinghua, beijing, cryo-em, density-map, a-2-net, vrmol, prismnet, 3d-vision, rna-structure">
+
+  <!-- fall back to site title if page has no title -->
+  <title>
+    
+       Karan Desai
+   
+  </title>
+  <meta itemprop="description" name="description" content="Visiting research scholar at Tsinghua University." />
+  <link rel="canonical" href="https://xukui.cn/">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="static/ico/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="static/ico/kui-72.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="static/ico/kui-72.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="static/ico/kui-120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="static/ico/kui-144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="static/ico/kui-152.png" />
+
+  <!--Open Graph Related Stuff-->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kui Xu">
+  <meta property="og:url" content="https://xukui.cn/">
+  <meta property="og:site_name" content="Kui Xu">
+  <meta property="og:image" content="static/img/kui2.jpg"/>
+  <meta property="og:image:url" content="https://xukui.cn/static/img/kui2.jpg"/>
+  <meta property="og:description" content="Visiting research scholar at Tsinghua University.">
+
+  <!--Twitter Card Stuff-->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Kui Xu">
+  <meta name="twitter:description" content="Visiting research scholar at Tsinghua University.">
+  <meta name="twitter:creator" content="@xukuit">
+
+  <meta name="twitter:image" content="static/img/kui2.jpg"/>
+  <meta name="twitter:url" content="https://xukui.cn/static/img/kui2.jpg"/>
+  <meta name="twitter:description" content="Visiting research scholar at Tsinghua University."/>
+  <meta name="twitter:domain" value="xukui.cn">
+
+  <meta name="twitter:label1" value="Visiting Research Scholar"/>
+  <meta name="twitter:data1" value="Tsinghua University"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <!-- Search Engine Optimization
+  <meta name="google-site-verification" content="googleca51599afffe0f7e.html" />
+  -->
+</head>
+
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKVKMCP" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <nav id="navbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 col-12">
+        <div id="site-title-container">
+          <img alt="Kui Xu" title="Kui Xu" src="static/img/geometry.gif" style="height: 30px;"/>
+          <a id="site-title" href="">Kui Xu</a>
+        </div>
+        <div id="navbar-ul-container">
+          <ul id="navbar-ul">
+            <li class="nav-listitem">
+              <a target="_blank" href="kui_cv.pdf">CV</a>
+            </li>
+            <li class="nav-listitem">
+              <a target="_blank" href="https://scholar.google.com/citations?user=Hhpry4kAAAAJ&hl=en">Google Scholar</a>
+            </li>
+            <li class="nav-listitem">
+              <a target="_blank" href="https://www.semanticscholar.org/author/Kui-Xu/40452051">Semantic Scholar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr id="navbar-border">
+  </div>
+</nav>
+
+
+  <div class="container">
+    <div class="content">
+      <div class="container">
+  <div class="row">
+    <!-- Display picture and social media links -->
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="row">
+        <!-- Display picture -->
+        <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 0">
+          <img alt="Kui Xu" title="Kui Xu" id="display-picture" src="static/img/kui2.jpg" />
+        </div>
+        <!-- Social media links -->
+        <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 0; text-align: center">
+          <ul id="social-media-ul">
+            <li class="social-media">
+              <a target="_blank" href="https://github.com/kuixu" itemprop="sameAs">
+                <i class="fab fa-fw fa-github" aria-hidden="true"></i>
+                <span>kuixu</span>
+              </a>
+            </li>
+            <li class="social-media">
+              <a target="_blank" href="https://twitter.com/kuixut" itemprop="sameAs">
+                <i class="fab fa-fw fa-twitter" aria-hidden="true"></i>
+                <span>kuixut</span>
+              </a>
+            </li>
+            <!--<li class="social-media">
+              <a target="_blank" href="https://instagram.com/kdexd" itemprop="sameAs">
+                <i class="fab fa-fw fa-instagram" aria-hidden="true"></i>
+                <span>kdexd</span>
+              </a>
+            </li>
+          -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- About -->
+    <div class="col-md-8 col-sm-8 col-xs-12">
+      <p>
+        I am a PhD student at <a target="_blank" href="https://www.tsinghua.edu.cn/">Tsinghua University</a>, advised
+        by <a target="_blank" href="http://zhanglab.net/team?index=1">Qiangfeng Cliff Zhang</a>.
+        I am broadly interested in deep learning, with data-driven algorithm design and applications in real world (2D and 3D computer
+        vision) and micro world (<a href="https://github.com/kuixu/awesome-cryoem">Electron Cryo-Microscopy Density map</a> based molecular structure model building, Single Cell Clustering and RNA Structure Understanding.
+      </p>
+      <p>
+        Prior to PhD student, I was a visiting scholar at Chinese University of Hong Kong, collaborating with awesome folks in the lab of
+        <a href="http://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>. I also works closely with <a href="https://wang-zhe.me/">Zhe Wang</a>, 
+        <a href="http://shijianping.me/">Jianping Shi</a> and <a href="hhttp://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>, focusing on 3D Object Detection and 
+        <a href="https://arxiv.org/abs/1901.00785">molecular structure model building</a>.
+      </p>
+      <p>
+        I received master and bachelor degree in Computer Science in Tianjin Polytechnic University in 2016 and 2013, respectively. 
+        I have also spent time at <a href="http://www.icst.pku.edu.cn/mipl">Multimedia Information Processing Lab (<b>MIPL</b>)</a>, 
+        Peking University as a research intern.
+      </p>
+      <p style="margin-top: 20px">
+        Feel free to say hi: <b>xuk16 at mails.tsinghua.edu.cn</b>
+      </p>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<h2>What's New</h2>
+
+<p>
+<strong>[May 2020]</strong> Paper out on BioRxiv: <a href="https://www.biorxiv.org/content/10.1101/2020.05.05.078774v1">Predicting dynamic cellular protein-RNA interactions using deep learning and in vivo RNA structure</a>, 
+code are available at <a href="https://github.com/kuixu/PrismNet">PrismNet</a>.<br />
+<strong>[Oct 2019]</strong> Paper out on Nature Communication: <a href="https://www.nature.com/articles/s41467-019-12630-7">SCALE method for single-cell ATAC-seq analysis via latent feature extraction</a>, code are available at <a href="https://github.com/jsxlei/SCALE">SCALE</a>.  <br />
+<strong>[Mar 2019]</strong> Paper out on BioRxiv: <a href="https://www.biorxiv.org/content/early/2019/03/27/589366.1">VRmol: an Integrative Cloud-Based Virtual Reality System to Explore Macromolecular Structure</a>,
+code are available at <a href="https://github.com/kuixu/VRmol">VRmol</a>.<br />
+<strong>[Jan 2019]</strong> Presented my work <a href="https://arxiv.org/abs/1901.00785">A<sup>2</sup>-Net</a> at AAAI 2019, Hawaii.<br />
+<!-- **<strong>[Sep 2019]</strong> Started as a PhD student at the University of Michigan!<br />
+<strong>[Apr 2019]</strong> <a href="https://arxiv.org/abs/1902.07864">Probabilistic Neural-symbolic Models for Interpretable Visual Question Answering</a> accepted to ICML 2019!<br />
+<strong>[Feb 2019]</strong> Paper out on arxiv: <a href="https://arxiv.org/abs/1902.07864">Probabilistic Neural-symbolic Models for Interpretable Visual Question Answering</a>.<br />-->
+<!-- **[Jan 2019]** New version for [Visual Dialog Challenge starter code](https://github.com/batra-mlp-lab/visdial-challenge-starter-pytorch/tree/v2019.0.0) released!   -->
+<!-- **[Jan 2019]** Organizing the second [Visual Dialog challenge](https://visualdialog.org/challenge/2019), results to be announced at CVPR 2019!   -->
+<!-- **[Dec 2018]** Paper out on arxiv: [nocaps: novel object captioning at scale](https://arxiv.org/abs/1812.08658).   -->
+<!-- **[Oct 2018]** Visiting the annual Google Summer of Code mentor summit (Google Mountain View).  
+**[Jul 2018]** Co-organizing the first [Visual Dialog challenge](https://visualdialog.org/challenge/2018), results to be announced at ECCV 2018!  
+**[Jun 2018]** Joining Georgia Tech as a visiting research scholar under the supervision of Devi Parikh and Dhruv Batra.  
+**[May 2018]** Graduated from Indian Institute of Technology Roorkee, major in Electrical Engineering.  
+ --></p>
+<hr />
+
+<h2>Research</h2>
+
+<div class="paper-container row">
+  <div class="paper-title col-md-12 col-sm-12 col-xs-12">
+    Predicting dynamic cellular protein-RNA interactions using deep learning and in vivo RNA structure
+  </div>
+  <div class="paper-authors col-md-12 col-sm-12 col-xs-12">
+    Lei Sun*, <b>Kui Xu*</b>, Wenze Huang*, Yucheng T. Yang, Lei Tang, Tuanlin Xiong and Qiangfeng Cliff Zhang
+  </div>
+  <!-- arxiv and website link -->
+  <div class="paper-links col-md-12 col-sm-12 col-xs-12">
+    <a class="paper-link button-div" href="https://www.biorxiv.org/content/10.1101/2020.05.05.078774v1" target="_blank">
+      biorxiv/10.1101/2020.05.05.078774
+    </a>
+    <a class="paper-link button-div" href="//github.com/kuixu/PrismNet" target="_blank">
+      code
+    </a>
+    <a class="paper-link button-div" href="static/bibliography/prismnet_bibtex.txt" target="_blank">
+      bibtex
+    </a>
+    
+  </div>
+  <div class="paper-banner col-md-12 col-sm-12 col-xs-12">
+    <img src="static/img/research/prismnet_banner.png" alt="PrismNet" title="Predicting dynamic cellular protein-RNA interactions using deep learning and in vivo RNA structure" />
+  </div>
+</div>
+
+<div class="paper-container row">
+  <div class="paper-title col-md-12 col-sm-12 col-xs-12">
+    SCALE method for single-cell ATAC-seq analysis via latent feature extraction
+  </div>
+  <!-- negative margin to account for superscripted asterisk -->
+  <div class="paper-authors col-md-12 col-sm-12 col-xs-12" style="margin-top: -4px;">
+    Lei Xiong, <b>Kui Xu</b>, Kang Tian, Yanqiu Shao, Lei Tang, Ge Gao, Michael Zhang, Tao Jiang and Qiangfeng Cliff Zhang
+  </div>
+  <!-- arxiv and website link -->
+  <div class="paper-links col-md-12 col-sm-12 col-xs-12">
+    <span class="paper-link">
+      <b>Nature Communication</b>
+    </span>
+    <a class="paper-link button-div" href="https://www.nature.com/articles/s41467-019-12630-7" target="_blank">
+      nature.com/articles/s41467-019-12630-7
+    </a>
+    <a class="paper-link button-div" href="https://github.com/jsxlei/SCALE/wiki" target="_blank">
+      wiki
+    </a>
+    <a class="paper-link button-div" href="https://github.com/jsxlei/SCALE" target="_blank">
+      code
+    </a>
+    <a class="paper-link button-div" href="static/bibliography/scale_bibtex.txt" target="_blank">
+      bibtex
+    </a>
+  </div>
+  <div class="paper-banner col-md-12 col-sm-12 col-xs-12">
+    <img src="static/img/research/scale_banner.png" alt="SCALE" title="SCALE method for single-cell ATAC-seq analysis via latent feature extraction" style="width: 50%;"/>
+  </div>
+</div>
+
+<hr />
+
+<div class="paper-container row">
+  <div class="paper-title col-md-12 col-sm-12 col-xs-12">
+    VRmol: an Integrative Cloud-Based Virtual Reality System to Explore Macromolecular Structure
+  </div>
+  <div class="paper-authors col-md-12 col-sm-12 col-xs-12">
+    <b>Kui Xu</b>, Nan Liu, Jingle Xu, Chunlong Guo, Lingyun Zhao, Hong-Wei Wang and Qiangfeng Cliff Zhang
+  </div>
+  <!-- arxiv and website link -->
+  <div class="paper-links col-md-12 col-sm-12 col-xs-12">
+   
+    <a class="paper-link button-div" href="https://www.biorxiv.org/content/10.1101/589366v2" target="_blank">
+      biorxiv/10.1101/589366v2
+    </a>
+    <a class="paper-link button-div" href="https://VRmol.net" target="_blank">
+      server
+    </a>
+    <a class="paper-link button-div" href="https://github.com/kuixu/VRmol/wiki" target="_blank">
+      wiki
+    </a>
+    <a class="paper-link button-div" href="https://github.com/kuixu/VRmol" target="_blank">
+      code
+    </a>
+    <a class="paper-link button-div" href="static/bibliography/vrmol_bibtex.txt" target="_blank">
+      bibtex
+    </a>
+  </div>
+  <div class="paper-banner col-md-12 col-sm-12 col-xs-12">
+    <img src="static/img/research/vrmol_banner1.png" alt="VRmol" title="VRmol: an Integrative Cloud-Based Virtual Reality System to Explore Macromolecular Structure"/>
+  </div>
+</div>
+
+<hr />
+
+<div class="paper-container row">
+  <div class="paper-title col-md-12 col-sm-12 col-xs-12">
+    A<sup>2</sup>-Net: Molecular Structure Estimation from Cryo-EM Density Volumes
+  </div>
+  <div class="paper-authors col-md-12 col-sm-12 col-xs-12">
+    <b>Kui Xu</b>, Zhe Wang, Jianping Shi, Hongsheng Li and Qiangfeng Cliff Zhang
+  </div>
+  <!-- arxiv and website link -->
+  <div class="paper-links col-md-12 col-sm-12 col-xs-12">
+    <span class="paper-link">
+      <b>AAAI 2019</b>
+    </span>
+    <a class="paper-link button-div" href="https://arxiv.org/abs/1901.00785" target="_blank">
+      arxiv/1901.00785
+    </a>
+    <a class="paper-link button-div" href="static/page/A-2-Net/a-square-net/aaai19-xukui-poster.pdf" target="_blank">
+      poster
+    </a>
+    <a class="paper-link button-div" href="static/page/A-2-Net" target="_blank">
+      project
+    </a>
+    <a class="paper-link button-div" href="static/bibliography/a2net_bibtex.txt" target="_blank">
+      bibtex
+    </a>
+  </div>
+  <div class="paper-banner col-md-12 col-sm-12 col-xs-12">
+    <img src="static/img/research/a2-net_banner2.png" alt="A^2-Net"
+      title="A^2-Net: Molecular Structure Estimation from Cryo-EM Density Volumes" />
+  </div>
+</div>
+
+<hr />
+
+<h2>Open Source</h2>
+
+<div class="projects-container row">
+  <!-- project: visdial challenge starter pytorch -->
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="project-container row">
+      <div class="project-title col-md-12 col-sm-12 col-xs-12">
+        visdial-challenge-starter-pytorch <div class="project-stars button-div" id="kitti_object_vis"></div>
+      </div>
+      <div class="project-description col-md-12 col-sm-12 col-xs-12">
+        Starter code for the Visual Dialog Challenge. Built using PyTorch v1.0 and provides out of the box support with CUDA 9 and CuDNN 7. Provides a simple implementation of Late Fusion encoder and Discriminative decoder. Complete with efficient scripts for data preprocessing, image feature extraction, training and evaluation, along with support to generate a submission file for the challenge.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="projects-container row">
+  <!-- project: lang-emerge-parlai -->
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <div class="project-container row">
+      <div class="project-title col-md-12 col-sm-12 col-xs-12">
+        lang-emerge-parlai <div class="project-stars button-div" id="lang-emerge-parlai-stars"></div>
+      </div>
+      <div class="project-description col-md-12 col-sm-12 col-xs-12">
+        Implementation of the paper "Natural Language Does Not Emerge 'Naturally' in Multi-Agent Dialog" by <a href="//arxiv.org/abs/1706.08502" target="_blank">Kottur et al (EMNLP 2017)</a>, using PyTorch and ParlAI.
+      </div>
+      <div class="project-banner col-md-12 col-sm-12 col-xs-12">
+        <img src="static/img/projects/lang_emerge_banner.jpg" alt="lang-emerge-parlai" title="language emergence" />
+      </div>
+    </div>
+  </div>
+
+  <!-- project: ntm-pytorch -->
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <div class="project-container row">
+      <div class="project-title col-md-12 col-sm-12 col-xs-12">
+        ntm-pytorch <div class="project-stars button-div" id="ntm-pytorch-stars"></div>
+      </div>
+      <div class="project-description col-md-12 col-sm-12 col-xs-12">
+        Implementation of Neural Turing Machines introduced in <a href="//arxiv.org/abs/1410.5401" target="_blank">Graves et al (2014)</a>, using PyTorch. Supports training and evaluation on four out of six tasks described in the paper.
+      </div>
+      <div class="project-banner col-md-12 col-sm-12 col-xs-12">
+        <img src="static/img/projects/ntm_banner.jpg" alt="ntm-pytorch" title="neural turing machines" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="projects-container row">
+  <!-- project: trianglify -->
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <div class="project-container row">
+      <div class="project-title col-md-12 col-sm-12 col-xs-12">
+        trianglify <div class="project-stars button-div" id="trianglify-stars"></div>
+      </div>
+      <div class="project-description col-md-12 col-sm-12 col-xs-12">
+        Trianglify is a highly customizable library to generate beautiful triangle art views for android. Uses the Delaunay Triangulation algorithm behind the curtains.
+      </div>
+      <div class="project-banner col-md-12 col-sm-12 col-xs-12">
+        <img src="static/img/projects/trianglify_banner.jpg" alt="trianglify" title="trianglify" />
+      </div>
+    </div>
+  </div>
+
+  <!-- project: yolog -->
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <div class="project-container row">
+      <div class="project-title col-md-12 col-sm-12 col-xs-12">
+        yolog <div class="project-stars button-div" id="yolog-stars"></div>
+      </div>
+      <div class="project-description col-md-12 col-sm-12 col-xs-12">
+        Yolog wraps over vanilla git log and displays commit history complete with graph, timestamp, author and refs. Colors are configurable, and all standard git log commands work.
+      </div>
+      <div class="project-banner col-md-12 col-sm-12 col-xs-12">
+        <img src="static/img/projects/yolog_banner.jpg" alt="yolog" title="yolog" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<h2>First Projects</h2>
+
+<p>While I keep marching forward as years pass by, my first projects would always remind me of my humble beginnings: it has been <strong>five</strong> years on this roller-coaster, which I call my professional life.</p>
+
+<div class="projects-container row">
+  <!-- project: digit classifier -->
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <div class="project-container side-banner row">
+      <div class="col-md-9 col-sm-9 col-xs-12">
+        <div class="project-title side-banner">
+          digit-classifier <div class="project-stars button-div" id="digit-classifier-stars"></div>
+        </div>
+        <span class="project-description">
+          First neural network built using numpy (2015), a multi layer perceptron classifier for MNIST. This repository stayed on Github trending charts for almost a week, with <b>600+ stars</b>.
+        </span>
+      </div>
+      <div class="side-banner col-md-3 col-sm-3 col-xs-12">
+        <img src="static/img/projects/digit_banner.jpg" alt="digit-classifier" title="digit classifier" />
+      </div>
+    </div>
+  </div>
+
+  <!-- project: snake -->
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <div class="project-container side-banner row">
+      <div class="col-md-9 col-sm-9 col-xs-12">
+        <div class="project-title side-banner">
+          snake <div class="project-stars button-div" id="snake-stars"></div>
+        </div>
+        <span class="project-description">
+          First github repository (2015), browser based game of snake. During my first year of undergrad studies. The game still works on <a href="//kdexd.github.io/snake" target="_blank">gh-pages</a>!
+        </span>
+      </div>
+      <div class="side-banner col-md-3 col-sm-3 col-xs-12">
+        <img src="static/img/projects/snake_banner.jpg" alt="snake" title="snake" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<p><br /></p>
+
+<!-- Show github stars beside projects -->
+<script>
+  window.githubStars = function (user, repo) {
+    var xhr = new XMLHttpRequest();
+    var url = "https://api.github.com/repos/" + user + "/" + repo;
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        document.getElementById(repo + "-stars").innerHTML = `
+          <a target="_blank" href="https://github.com/` + user + `/` + repo + `" itemprop="sameAs">
+            <span>` + parseInt(JSON.parse(xhr.responseText).stargazers_count) + `</span>
+            <i class="fas fa-star" aria-hidden="true"></i>
+          </a>`;
+      }
+    }
+    xhr.open("GET", url);
+    xhr.setRequestHeader("Accept", "application/vnd.github.v3+json");
+    xhr.send();
+  }
+
+  githubStars("batra-mlp-lab", "visdial-challenge-starter-pytorch");
+  githubStars("kdexd", "lang-emerge-parlai");
+  githubStars("vlgiitr", "ntm-pytorch");
+  githubStars("mdg-iitr", "trianglify");
+  githubStars("kdexd", "yolog");
+  githubStars("kdexd", "digit-classifier");
+  githubStars("kuixu", "kitti_object_vis");
+</script>
+
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>

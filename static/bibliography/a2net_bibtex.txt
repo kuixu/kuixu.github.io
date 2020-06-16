@@ -1,0 +1,6 @@
+@inProceedings{aaai2019_xukui,
+title={A^2-Net: Molecular Structure Estimation from Cryo-EM Density Volumes},
+author = {Kui Xu, Zhe Wang, Jiangping Shi, Hongsheng Li, Qiangfeng Cliff Zhang},
+booktitle={AAAI},
+year={2019}
+}
