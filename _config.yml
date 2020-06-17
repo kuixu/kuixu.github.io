@@ -1,8 +1,6 @@
-title: Hello, world! I'm Kui
+title: I'm Kui
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  kui, kui xu, tsinghua, beijing, cryo-em, density-map, a-2-net, vrmol, prismnet, 3d-vision, rna-structure.
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kuixu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
@@ -11,8 +9,8 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Kui Xu # add your name
 author-img: atavor.png # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
-twitter: # add your Twitter handle
+about-author: kui, kui xu, tsinghua, beijing, cryo-em, density-map, a-2-net, vrmol, prismnet, 3d-vision, rna-structure. # add description
+twitter: kuixut# add your Twitter handle
 facebook: # add your Facebook handle
 github: kuixu # add your Github handle
 linkedin: # add your Linkedin handle
