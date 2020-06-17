@@ -1,0 +1,17 @@
+@article{10.1093/nar/gkx864,
+    author = {Gong, Jing and Shao, Di and Xu, Kui and Lu, Zhipeng and Lu, Zhi John and Yang, Yucheng T and Zhang, Qiangfeng Cliff},
+    title = "{RISE: a database of RNA interactome from sequencing experiments}",
+    journal = {Nucleic Acids Research},
+    volume = {46},
+    number = {D1},
+    pages = {D194-D201},
+    year = {2017},
+    month = {10},
+    abstract = "{We present RISE (http://rise.zhanglab.net), a database of RNA Interactome from Sequencing Experiments. RNA-RNA interactions (RRIs) are essential for RNA regulation and function. RISE provides a comprehensive collection of RRIs that mainly come from recent transcriptome-wide sequencing-based experiments like PARIS, SPLASH, LIGR-seq, and MARIO, as well as targeted studies like RIA-seq, RAP-RNA and CLASH. It also includes interactions aggregated from other primary databases and publications. The RISE database currently contains 328,811 RNA-RNA interactions mainly in human, mouse and yeast. While most existing RNA databases mainly contain interactions of miRNA targeting, notably, more than half of the RRIs in RISE are among mRNA and long non-coding RNAs. We compared different RRI datasets in RISE and found limited overlaps in interactions resolved by different techniques and in different cell lines. It may suggest technology preference and also dynamic natures of RRIs. We also analyzed the basic features of the human and mouse RRI networks and found that they tend to be scale-free, small-world, hierarchical and modular. The analysis may nominate important RNAs or RRIs for further investigation. Finally, RISE provides a Circos plot and several table views for integrative visualization, with extensive molecular and functional annotations to facilitate exploration of biological functions for any RRI of interest.}",
+    issn = {0305-1048},
+    doi = {10.1093/nar/gkx864},
+    url = {https://doi.org/10.1093/nar/gkx864},
+    eprint = {https://academic.oup.com/nar/article-pdf/46/D1/D194/33043705/gkx864.pdf},
+}
+
+

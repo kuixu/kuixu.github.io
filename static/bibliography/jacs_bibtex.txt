@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+
+@article{doi:10.1021/jacs.8b13038,
+author = {Liu, Nan and Zhang, Jincan and Chen, Yanan and Liu, Chuan and Zhang, Xing and Xu, Kui and Wen, Jie and Luo, Zhipu and Chen, Shulin and Gao, Peng and Jia, Kaicheng and Liu, Zhongfan and Peng, Hailin and Wang, Hong-Wei},
+title = {Bioactive Functionalized Monolayer Graphene for High-Resolution Cryo-Electron Microscopy},
+journal = {Journal of the American Chemical Society},
+volume = {141},
+number = {9},
+pages = {4016-4025},
+year = {2019},
+doi = {10.1021/jacs.8b13038},
+    note ={PMID: 30724081},
+
+URL = { 
+        https://doi.org/10.1021/jacs.8b13038
+    
+},
+eprint = { 
+        https://doi.org/10.1021/jacs.8b13038
+    
+}
+
+}
+
+

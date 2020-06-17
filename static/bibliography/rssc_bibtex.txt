@@ -1,0 +1,9 @@
+@article{rssc,
+title = {Reweighted sparse subspace clustering},
+journal = {Computer Vision and Image Understanding},
+volume = {138},
+number = {0},
+pages = {25--37},
+year = {2015},
+author = {Jun Xu and Kui Xu and Ke Chen and Jishou Ruan}
+}
