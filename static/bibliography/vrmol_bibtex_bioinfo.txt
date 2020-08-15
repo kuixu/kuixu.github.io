@@ -1,0 +1,16 @@
+@article{10.1093/bioinformatics/btaa696,
+    author = {Xu, Kui and Liu, Nan and Xu, Jingle and Guo, Chunlong and Zhao, Lingyun and Wang, Hong-Wei and Zhang, Qiangfeng Cliff},
+    title = "{VRmol: an Integrative Web-Based Virtual Reality System to Explore Macromolecular Structure}",
+    journal = {Bioinformatics},
+    year = {2020},
+    month = {08},
+    abstract = "{Structural visualization and analysis are fundamental to explore macromolecular functions. Here we present a novel integrative web-based virtual reality (VR) system – VRmol, to visualize and study molecular structures in an immersive virtual environment. Importantly, it is integrated with multiple online databases and able to couple structure studies with associated genomic variations and drug information in a visual interface by cloud-based drug docking. VRmol thus can serve as an integrative platform to aid structure-based translational research and drug design.VRmol is freely available (https://VRmol.net), with detailed manual and tutorial (https://VRmol.net/docs). The code of VRmol is available as open source under the MIT license at http://github.com/kuixu/VRmol.Supplementary data are available at Bioinformatics online.}",
+    issn = {1367-4803},
+    doi = {10.1093/bioinformatics/btaa696},
+    url = {https://doi.org/10.1093/bioinformatics/btaa696},
+    note = {btaa696},
+    eprint = {https://academic.oup.com/bioinformatics/advance-article-pdf/doi/10.1093/bioinformatics/btaa696/33560033/btaa696.pdf},
+}
+
+
+
