@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 @article{doi:10.1021/jacs.8b13038,
 author = {Liu, Nan and Zhang, Jincan and Chen, Yanan and Liu, Chuan and Zhang, Xing and Xu, Kui and Wen, Jie and Luo, Zhipu and Chen, Shulin and Gao, Peng and Jia, Kaicheng and Liu, Zhongfan and Peng, Hailin and Wang, Hong-Wei},
 title = {Bioactive Functionalized Monolayer Graphene for High-Resolution Cryo-Electron Microscopy},
