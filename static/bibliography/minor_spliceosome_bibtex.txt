@@ -1,0 +1,13 @@
+@article {Baieabg0879,
+	author = {Bai, Rui and Wan, Ruixue and Wang, Lin and Xu, Kui and Zhang, Qiangfeng and Lei, Jianlin and Shi, Yigong},
+	title = {Structure of the activated human minor spliceosome},
+	elocation-id = {eabg0879},
+	year = {2021},
+	doi = {10.1126/science.abg0879},
+	publisher = {American Association for the Advancement of Science},
+	abstract = {The minor spliceosome mediates splicing of the rare but essential U12-type pre-mRNA. Here we report the atomic features of the activated human minor spliceosome determined by cryo-electron microscopy at 2.9-{\r A} resolution. The 5'-splice site and branch point sequence of the U12-type intron are recognized by U6atac and U12 small nuclear RNA (snRNA), respectively. Five newly identified proteins stabilize the conformation of the catalytic center. The zinc finger protein SCNM1 functionally mimics the SF3a complex of the major spliceosome. The RBM48/ARMC7 complex binds the γ-monomethyl phosphate cap at the 5'-end of U6atac snRNA. The U-box protein PPIL2 coordinates loop I of U5 snRNA and stabilizes U5 snRNP. CRIPT stabilizes U12 snRNP. Our study provides a framework for mechanistic understanding of the function of the minor spliceosome.},
+	issn = {0036-8075},
+	URL = {https://science.sciencemag.org/content/early/2021/01/27/science.abg0879},
+	eprint = {https://science.sciencemag.org/content/early/2021/01/27/science.abg0879.full.pdf},
+	journal = {Science}
+}
