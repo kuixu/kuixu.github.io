@@ -1,5 +1,7 @@
 json = '{\
     "Qiangfeng Cliff Zhang": "http://zhanglab.net/team?index=1",\
+    "Ning Gao": "https://bio.pku.edu.cn/homes/Index/news_cont_jl/17/596.html",\
+    "Ningning Li": "https://bio.pku.edu.cn/homes/Index/news_cont_jl/17/804.html",\
     "Xiaogang Wang": "http://www.ee.cuhk.edu.hk/~xgwang/",\
     "Yuxin Peng": "http://59.108.48.34/tiki/yuxinpeng/",\
     "Hongsheng Li": "https://www.ee.cuhk.edu.hk/~hsli/",\
